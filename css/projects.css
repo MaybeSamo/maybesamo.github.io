@@ -1,0 +1,40 @@
+@font-face {
+    font-family: mainfont;
+    src: url(../font/Typo_Round_Bold_Demo.otf);
+}
+
+* {
+    font-family: mainfont;
+}
+
+body {
+    background-image: linear-gradient(to left, rgb(34, 51, 62), rgb(37, 56, 74));
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 60px #fff,
+    0 0 80px #fff;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 60px #fff,
+    0 0 80px #fff;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

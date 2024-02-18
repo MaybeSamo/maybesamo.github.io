@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+    <script>
+        function copyName() {
+            console.log("Copied");
+            alert("Username copied to clipboard!");
+            navigator.clipboard.writeText("maybesamo");
+        }
+    </script>
+        <header class="header">
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="">Projects</a>
+                <a href="contacts.html">Where to find me</a>
+            </nav>
+        </header>
+    <h1 class="title">Where to find me</h1>
+    <a href="https://github.com/maybesamo" class="contact"><img src="images/github-mark-white.png" alt=""></a>
+    <a href="#" class="contact" onclick="copyName()"><img src="images/discord.png" class="discordimg"></a>
+    <h2>Email: maybesamo@gmail.com</h2>
+</body>
+</html>

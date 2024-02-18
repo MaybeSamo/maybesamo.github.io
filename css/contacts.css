@@ -1,0 +1,96 @@
+@font-face {
+    font-family: mainfont;
+    src: url(../font/Typo_Round_Bold_Demo.otf);
+}
+
+@keyframes fade-in {
+    0% {
+        scale: 50%;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 100%;
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 60px #fff,
+    0 0 80px #fff;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 60px #fff,
+    0 0 80px #fff;
+}
+
+body {
+    font-family: mainfont;
+    background-image: linear-gradient(to left, rgb(34, 51, 62), rgb(37, 56, 74));
+}
+
+.contact {
+    scale: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.contact img {
+    scale: 50%;
+    width: 10%;
+    height: 10%;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position: relative;
+    font-family: mainfont;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
