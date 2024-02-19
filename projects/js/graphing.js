@@ -26,8 +26,6 @@ function clearGraph() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawLine(ctx, [0, 500/2], [500, 500/2], 'white', 2);
     drawLine(ctx, [500/2, 0], [500/2, 500], 'white', 2);
-    ctx.font = "15px Arial";
-    ctx.fillText("0", 10, 30);
 
     //draws increment coordinate lines
     for (let i = -10; i <= 10; i++) {
