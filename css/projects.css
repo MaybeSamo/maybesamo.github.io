@@ -3,25 +3,39 @@
     src: url(../font/Typo_Round_Bold_Demo.otf);
 }
 
+@keyframes fade-in {
+    0% {
+        scale: 50%;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 100%;
+        opacity: 1;
+    }
+}
+
 * {
     font-family: mainfont;
 }
+
 
 body {
     background-image: linear-gradient(to left, rgb(34, 51, 62), rgb(37, 56, 74));
 }
 
 h1 {
+    scale: 50%;
     text-align: center;
-    color: white;
-    text-shadow: 0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #fff,
-    0 0 60px #fff,
-    0 0 80px #fff;
+    color: #fff; /* Text color */
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+      animation-name: fade-in;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
 }
 
 h4 {
+    scale: 50%;
     text-align: center;
     color: white;
     text-shadow: 0 0 10px #fff,
@@ -29,12 +43,73 @@ h4 {
     0 0 40px #fff,
     0 0 60px #fff,
     0 0 80px #fff;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 canvas {
+    scale: 50%;
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    display: block;
+    margin : 0 auto;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    display: block;
+    margin : 0 auto;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position: relative;
+    font-family: mainfont;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
 }
