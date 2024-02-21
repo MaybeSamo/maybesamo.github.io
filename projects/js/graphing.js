@@ -26,6 +26,7 @@ function clearGraph() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawLine(ctx, [0, 500/2], [500, 500/2], 'white', 2);
     drawLine(ctx, [500/2, 0], [500/2, 500], 'white', 2);
+    ctx.font = "15px Arial";
 
     //draws increment coordinate lines
     for (let i = -10; i <= 10; i++) {
@@ -36,8 +37,16 @@ function clearGraph() {
 
 clearGraph();
 
+const hasNumbers = (str) => {
+    return /\d/.test(str);
+};
+
 function graphEquation() {
     let y = document.getElementById("y").value;
+    if (!hasNumbers(y)) {
+        alert("Please Input a valid equation. Example: 1x+5");
+        return;
+    }
     let additiveToY = 0;
     let subtractToY = 0;
     let lineCoord1 = [];
